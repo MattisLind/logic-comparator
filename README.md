@@ -27,3 +27,5 @@ The solution would be to make me my own one. It would be cheaper than buying an 
 ![PCB layout](http://i.imgur.com/FQjtUaC.png "PCB layout")
 
 This is the PCB layout. The idea is to put the reference IC in the ZIF socket and then program the inputs by inserting ajumper at the aproriate position in the two rows of pin headers. I am looking into the option of creacting a small PCB that could be pushed over the PIN headers and thus can be similar to the ones used with the HP10529: A library of reference boards for common types of TTL ICs.
+
+Unfortunately there is a small annoying fault in the current layout. The electrolytic capacitor is connected to the LED directly instead of the output of the open collector driver. This is to be fixed in the layout, but the oredered boards are wrong and had to be fixed by small wires and cuts...
