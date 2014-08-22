@@ -22,3 +22,8 @@ The first problem with the HP10529 is that it is obsolete. There are ones sold o
 
 The solution would be to make me my own one. It would be cheaper than buying an of Ebay in the US and have it shipped to Sweden.
 
+### PCB layout
+
+![Principal schematics](http://i.imgur.com/LLO6YNs.png "Principal schematics")
+
+This is the PCB layout. The idea is to put the reference IC in the ZIF socket and then program the inputs by inserting ajumper at the aproriate position in the two rows of pin headers. I am looking into the option of creacting a small PCB that could be pushed over the PIN headers and thus can be similar to the ones used with the HP10529: A library of reference boards for common types of TTL ICs.
