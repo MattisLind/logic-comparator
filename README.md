@@ -13,8 +13,8 @@ The HP10529A will then compare the outputs of the reference and the DUT. If ther
 
 ![Principal schematics](http://i.imgur.com/PQQRCGe.png "Principal schematics")
 
-The HP10529A uses a 74LS86 comparator and also a open collector driver to drive the LED. There is a capacitor on the output of the 74LS86 to smear out the signal timewise.
-and also a low pass filtering circuit on the open collector output so that the LED will stay on longer if there is a short pulse that is in error.
+The HP10529A uses a 74L86 comparator and also a open collector driver to drive the LED. There is a capacitor on the output of the 74L86 to smear out the signal timewise.
+and also a low pass filtering circuit on the open collector output so that the LED will stay on longer if there is a short pulse that is in error. When the output of the open collector NOR goes to it discharge the capacitor and also create a low level on the input of the 74L04 inverter. Thus the NOR still will have a low output for some longer time.
 
 If the signal on the reference board is an input the signal from the DUT si connected to both the reference chip and the both of the inputs of the 74LS86. If the signal is an output the reference chip is connected to the upper input signal of the 74LS86 and the DUt connected to the lower input of the 74LS86 in the schematics above.
 
@@ -26,6 +26,8 @@ The solution would be to make me my own one. It would be cheaper than buying an 
 
 ![PCB layout](http://i.imgur.com/FQjtUaC.png "PCB layout")
 
-This is the PCB layout. The idea is to put the reference IC in the ZIF socket and then program the inputs by inserting ajumper at the aproriate position in the two rows of pin headers. I am looking into the option of creacting a small PCB that could be pushed over the PIN headers and thus can be similar to the ones used with the HP10529: A library of reference boards for common types of TTL ICs.
+This is the PCB layout. The idea is to put the reference IC in the ZIF socket and then program the inputs by inserting ajumper at the aproriate position in the two rows of pin headers. I am looking into the option of creacting a small PCB that could be pushed over the PIN headers and thus can be similar to the ones used with the HP10529: A library of reference boards for common types of TTL ICs. 
+
+The pulse stretching circuit is less advanced in that I motted the feedback signal via the capacitor that would stretch the signal. This mainly due to lack of space and possibility to route that many wires on the board.
 
 Unfortunately there is a small annoying fault in the current layout. The electrolytic capacitor is connected to the LED directly instead of the output of the open collector driver. This is to be fixed in the layout, but the oredered boards are wrong and had to be fixed by small wires and cuts...
