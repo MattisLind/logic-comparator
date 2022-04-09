@@ -1,6 +1,8 @@
 logic-comparator
 ================
 
+This implementation of the Logic Comparator has a design flaw that I intended to fix any day. But it hasn't happened yet. Do not use the current design. 
+
 Logic Comparator
 
 This project aims to create a modern version of the obsolete [HP10529A](http://www.keysight.com/en/pd-1000000984%3Aepsg%3Apro-pn-10529A/logic-comparator?cc=SE&lc=eng)
